@@ -4,6 +4,8 @@ const PORT = 8080;
 const cats = require('./cats.js');
 const dogs = require('./dog.js');
 
+
+app.use(express.static('./public'));
 app.use('/cats', cats);
 app.use('/dogs', dogs);
 

@@ -1,14 +1,14 @@
 const express = require('express');
-const router = express.Router();
+const cats = express.Router();
 
-router.get('/', (req, res) => {
-  res.send('cat');
+cats.get('/normal', (req, res) => {
+  res.send('<h1>Cat</h1>');
 });
 
-router.get('/sassy', (req, res) => {
-  res.send('sassy cat');
+cats.get('/sassy', (req, res) => {
+  res.send('<h1>Sassy Cat</h1>');
 });
 
 
 
-module.exports = router;
+module.exports = cats;
